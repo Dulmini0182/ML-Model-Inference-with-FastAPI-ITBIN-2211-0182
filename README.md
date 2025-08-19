@@ -1,29 +1,20 @@
-# Sentiment Analysis API (FastAPI)
+Sentiment Analysis API
 
-A minimal ML inference service using **TF-IDF + Logistic Regression** to classify text sentiment (positive/negative).
+This project implements a **REST API** for sentiment analysis using **FastAPI**.  
+It loads a pre-trained **TF-IDF + Logistic Regression** model (`model.pkl`) to classify text sentiment and optionally provide confidence scores.  
 
-## Problem
-- **Task:** Binary text sentiment classification
-- **Input:** `text` (string)
-- **Output:** `prediction` (positive/negative), `confidence` (probability)
+Features
+- Fast and lightweight API built with **FastAPI**  
+- **Single** and **batch** text predictions  
+- **Health check** endpoint to verify service status  
+- **Model info** endpoint for metadata  
+- Input validation with **Pydantic**  
 
-## Model
-- **Vectorizer:** TfidfVectorizer(1-2 grams, English stopwords)
-- **Classifier:** LogisticRegression (max_iter=1000)
-- **Why:** Simple, fast, and strong baseline for sentiment tasks
+Installation
 
-## Data
-Place a CSV at `data/sentiment.csv` with columns:
-- `text` — the sentence/review
-- `label` — `positive` or `negative` (or 1/0)
-
-> If not provided, a tiny fallback dataset is used (for demo only).
-
-## Quickstart
-
+1. Clone the repository
 ```bash
-python -m venv .venv
-# Windows: .venv\Scripts\activate
-pip install -r requirements.txt
-python train_model.py
-uvicorn main:app --reload
+git clone <your-repo-url>
+cd <your-repo-folder>
+
+
