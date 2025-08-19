@@ -14,7 +14,7 @@ Installation
 
 1. Clone the repository
 ```bash
-git clone <your-repo-url>
-cd <your-repo-folder>
+git clone - https://github.com/Dulmini0182/ML-Model-Inference-with-FastAPI-ITBIN-2211-0182 
+
 
 
